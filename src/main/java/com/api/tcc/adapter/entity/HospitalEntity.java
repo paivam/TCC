@@ -1,10 +1,12 @@
 package com.api.tcc.adapter.entity;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -40,4 +42,10 @@ public class HospitalEntity implements Serializable {
 	
 	@Column(name = "CEP")
 	private String cep;
+	
+	@Column(name = "NOME_FANTASIA")
+	private String nomeFantasia;
+	
+	@OneToMany(mappedBy = "hospital")
+	private Set<ConsultaEntity> consultas;
 }

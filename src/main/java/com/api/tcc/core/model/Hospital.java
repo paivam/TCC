@@ -41,4 +41,6 @@ public class Hospital implements Serializable {
 	@NotNull(message = NOT_NULL)
 	@Size(max = 8, min = 8)
 	private String cep;
+	
+	private String nomeFantasia;
 }

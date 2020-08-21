@@ -30,4 +30,5 @@ public class Paciente implements Serializable{
 
 	@NotNull(message = NOT_NULL)
 	private String nome;
+	
 }
